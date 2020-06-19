@@ -8,13 +8,21 @@ def single_number(arr):
     #vals = []
     #vals2 = []
     #i = 0
-    for i in range(0,len(arr)-1):
-        if arr[i+1] == arr[i]:
-            arr.pop(i)
+    # for i in range(0,len(arr)-1):
+    #     if arr[i+1] == arr[i]:
+    #         arr.pop(i)
 
-        elif arr[i+1] != arr[i]:
-            return arr[i]
+    #     elif arr[i+1] != arr[i]:
+    #         return arr[i]
 
+    s = set()
+    for x in arr:
+        if x in s:
+            s.remove(x)
+        else:
+            s.add(x)
+
+    return list(s)[0]
         
 
 
